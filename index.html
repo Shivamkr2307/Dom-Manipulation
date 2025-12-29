@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Text Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        input, button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dynamic Text Update</h1>
+
+    <p id="displayText">Your text will appear here.</p>
+
+    <input type="text" id="userInput" placeholder="Enter some text">
+
+    <br><br>
+    <button onclick="updateText()">Update Text</button>
+
+    <script>
+        function updateText() {
+            
+            let inputText = document.getElementById("userInput").value;
+
+            document.getElementById("displayText").innerText = inputText;
+        }
+    </script>
+
+</body>
+</html>
